@@ -1,5 +1,6 @@
 import argparse
 parser = argparse.ArgumentParser(description='Interpret positional argument')
-parser.add_argument('--flag', dest='flag', action='store_true', help='Set the flag value to True')
+parser.add_argument('source', action='store', help='The source of the operation')
+parser.add_argument('dest', action='store', help='The destination of the operation')
 arguments = parser.parse_args()
-print(f"The flag's value is {arguments.flag}")
+print(f"Picasso will cycle from {arguments.source} to {arguments.dest}")
